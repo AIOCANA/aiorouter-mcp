@@ -25,15 +25,19 @@ Access **15+ AI models** (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API 
 # 1. Add the marketplace (once)
 codex plugin marketplace add AIOCANA/aiorouter-mcp
 
-# 2. Install the plugin
+# 2. Install the plugin — the MCP server is bundled (mcpServers), tools appear automatically
 codex plugin add aiorouter
 
-# 3. Register the MCP server (stdlib transport, official Codex command)
-codex mcp add aiorouter --env AIOROUTER_API_KEY=ak-your-key -- npx -y @aiorouter/mcp
+# 3. Set your API key when prompted (or export in your shell)
+export AIOROUTER_API_KEY=ak-your-key
 
 # 4. Verify
-codex mcp list        # should show aiorouter with 10 tools
+codex mcp list        # → aiorouter with 10 tools
 ```
+
+The plugin declares its MCP server via the `mcpServers` field in
+`plugin.json`, so `codex plugin add` registers the server automatically —
+no separate `codex mcp add` needed.
 
 ## Privacy
 

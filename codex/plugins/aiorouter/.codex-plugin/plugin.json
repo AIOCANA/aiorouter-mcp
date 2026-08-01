@@ -42,5 +42,14 @@
     ],
     "brandColor": "#155FA7",
     "screenshots": []
+  },
+  "mcpServers": {
+    "aiorouter": {
+      "command": "npx",
+      "args": ["-y", "@aiorouter/mcp"],
+      "env": {
+        "AIOROUTER_API_KEY": "${AIOROUTER_API_KEY}"
+      }
+    }
   }
 }

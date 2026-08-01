@@ -112,17 +112,18 @@ Add to `.mcp.json` in your project root:
 
   ### Codex CLI
 
-  **Install (Codex v0.146+ plugin marketplace + MCP server):**
+  **Install (Codex v0.146+ plugin marketplace — MCP server bundled):**
 
   ```bash
   # 1. Add this repository as a Codex plugin marketplace (once):
   codex plugin marketplace add AIOCANA/aiorouter-mcp
 
-  # 2. Install the plugin:
+  # 2. Install the plugin — the MCP server is declared via mcpServers in plugin.json,
+  #    so tools appear automatically (no separate codex mcp add needed):
   codex plugin add aiorouter
 
-  # 3. Register the MCP server (stdlib transport — official Codex command):
-  codex mcp add aiorouter --env AIOROUTER_API_KEY=ak-your-api-key-here -- npx -y @aiorouter/mcp
+  # 3. Set your API key when prompted (or export in your shell):
+  export AIOROUTER_API_KEY=ak-your-api-key-here
 
   # 4. Verify:
   codex mcp list    # → aiorouter with 10 tools
