@@ -1,0 +1,46 @@
+{
+  "name": "aiorouter",
+  "version": "1.1.1",
+  "description": "Access 15+ AI models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key with PII Shield privacy protection.",
+  "author": {
+    "name": "AIOrouter",
+    "url": "https://github.com/tayachu"
+  },
+  "homepage": "https://aiorouter.ca",
+  "repository": "https://github.com/AIOCANA/aiorouter-mcp",
+  "license": "MIT",
+  "keywords": [
+    "aiorouter",
+    "mcp",
+    "qwen",
+    "deepseek",
+    "glm",
+    "kimi",
+    "grok",
+    "ai",
+    "privacy"
+  ],
+  "interface": {
+    "displayName": "AIOrouter",
+    "shortDescription": "15+ AI models, one API key, PII Shield privacy",
+    "longDescription": "Access 15+ AI models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key with PII Shield privacy protection. Chat with non-Claude models, list models, check pricing and usage, compare models, and estimate costs.",
+    "developerName": "AIOrouter",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "websiteURL": "https://aiorouter.ca",
+    "privacyPolicyURL": "https://aiorouter.ca/docs/legal/privacy-policy",
+    "termsOfServiceURL": "https://aiorouter.ca/docs/legal/terms-of-service",
+    "logo": "./assets/logo.png",
+    "defaultPrompt": [
+      "Use aiorouter_chat to ask a non-Claude model (e.g., deepseek-v4-pro, qwen3.7-max) a question",
+      "Use aiorouter_list_models to show available models",
+      "Use aiorouter_get_usage to check API key usage"
+    ],
+    "brandColor": "#155FA7",
+    "screenshots": []
+  }
+}

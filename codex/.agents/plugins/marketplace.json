@@ -1,0 +1,20 @@
+{
+  "name": "aiorouter",
+  "interface": {
+    "displayName": "AIOrouter"
+  },
+  "plugins": [
+    {
+      "name": "aiorouter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aiorouter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
