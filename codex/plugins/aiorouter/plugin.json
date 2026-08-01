@@ -1,0 +1,20 @@
+{
+  "name": "aiorouter",
+  "version": "1.1.1",
+  "description": "Access 15+ AI models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key with PII Shield privacy protection. Includes MCP server for aiorouter_chat, model listing, pricing, usage, and cost estimation tools.",
+  "author": "tayachu",
+  "repository": "https://github.com/AIOCANA/aiorouter-mcp",
+  "homepage": "https://aiorouter.ca",
+  "license": "MIT",
+  "privacy_policies": ["https://aiorouter.ca/docs/legal/privacy-policy"],
+  "mcp_servers": {
+    "aiorouter": {
+      "command": "npx",
+      "args": ["-y", "@aiorouter/mcp"],
+      "env": {
+        "AIOROUTER_API_KEY": "${AIOROUTER_API_KEY}"
+      }
+    }
+  },
+  "notes": "Set AIOROUTER_API_KEY (from https://dashboard.aiorouter.ca/keys) when Codex prompts for the environment variable. Paid service — no free tier."
+}

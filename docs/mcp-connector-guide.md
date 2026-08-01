@@ -100,21 +100,33 @@ Add to `.mcp.json` in your project root:
 }
 ```
 
-### 5.4 Codex CLI
+  ### 5.4 Codex CLI
 
-```json
-{
-  "mcpServers": {
-    "aiorouter": {
-      "command": "npx",
-      "args": ["-y", "@aiorouter/mcp"],
-      "env": {
-        "AIOROUTER_API_KEY": "ak-your-api-key-here"
-      }
-    }
-  }
-}
-```
+  **Option 1 — Install via Codex Plugin Marketplace (recommended):**
+
+  ```bash
+  # Add this repository as a Codex plugin marketplace (once):
+  codex plugin marketplace add AIOCANA/aiorouter-mcp
+
+  # Install the plugin:
+  codex plugin install aiorouter
+
+  # Set your API key when prompted (or export in your shell):
+  export AIOROUTER_API_KEY=ak-your-api-key-here
+
+  # Verify:
+  codex mcp list    # → aiorouter with 10 tools
+  ```
+
+  **Option 2 — Manual `config.toml`:**
+
+  ```toml
+  # ~/.codex/config.toml
+  [mcp_servers.aiorouter]
+  command = "npx"
+  args = ["-y", "@aiorouter/mcp"]
+  env = { AIOROUTER_API_KEY = "ak-your-api-key-here" }
+  ```
 
 ### 5.5 Remote HTTP (optional)
 

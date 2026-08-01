@@ -1,0 +1,11 @@
+{
+  "name": "aiorouter",
+  "version": "1.0.0",
+  "description": "Official AIOrouter plugin marketplace — 15+ AI models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key with PII Shield privacy protection.",
+  "plugins": [
+    {
+      "name": "aiorouter",
+      "path": "plugins/aiorouter"
+    }
+  ]
+}
