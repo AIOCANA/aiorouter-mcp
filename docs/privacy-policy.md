@@ -2,8 +2,8 @@
 
 > **Applies to:** `@aiorouter/mcp` (npm package) and the AIOrouter Remote MCP Server (`https://api.aiorouter.ca/mcp`)
 > **Effective date:** 2026-08-01
-> **Version:** 1.1
-> **Consistent with:** AIOrouter Platform Privacy Policy v1.2.1 (https://aiorouter.ca/docs/legal/privacy-policy)
+> **Version:** 1.2
+> **Consistent with:** AIOrouter Platform Privacy Policy v1.3.0 (https://aiorouter.ca/docs/legal/privacy-policy)
 
 ## 1. Data Collection
 
@@ -41,7 +41,7 @@ The AIOrouter MCP Connector collects the following data:
 
 ## 5. Governance & Contact
 
-- This policy is governed by the **Personal Information Protection and Electronic Documents Act (PIPEDA)** (Canada) and **Quebec Law 25** (for Quebec residents), consistent with the AIOrouter platform policy.
+- This policy is governed by the laws of Canada applicable to the operation of the Service, consistent with the AIOrouter platform policy.
 - **Privacy inquiries / DSAR / deletion requests:** privacy@aiorouter.ca
 - **Security inquiries:** security@aiorouter.ca
 - **Support:** support@aiorouter.ca
