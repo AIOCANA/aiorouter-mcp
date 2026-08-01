@@ -1,0 +1,52 @@
+{
+  "name": "@aiorouter/mcp",
+  "version": "1.1.1",
+  "description": "AIOrouter MCP Server — 15+ AI models, single API key, privacy protection",
+  "license": "MIT",
+  "homepage": "https://aiorouter.ca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIOCANA/aiorouter-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AIOCANA/aiorouter-mcp/issues"
+  },
+  "bin": {
+    "aiorouter-mcp": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "aiorouter",
+    "model-context-protocol",
+    "ai",
+    "privacy",
+    "claude-desktop"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "test:smoke": "node scripts/mcp-smoke-test.mjs",
+    "publish:prepare": "node scripts/prepare-mcp-publish.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
