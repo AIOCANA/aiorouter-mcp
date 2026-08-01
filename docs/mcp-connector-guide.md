@@ -162,9 +162,9 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 - [x] Security review passed (15 secret scans, zero leaks)
 - [x] npm org `aiorouter` owned by AIOrouter (FOUNDER `tayachu`)
 - [x] **MCP protocol smoke test passed** (Phase 3H — `scripts/mcp-smoke-test.mjs`, 5/5 PASS)
-- [x] **公開 GitHub repo `AIOCANA/aiorouter-mcp` LIVE** (`834300d`, 26 files, governance hooks installed)
+- [x] **Public GitHub repo `AIOCANA/aiorouter-mcp` LIVE** (`834300d`, 26 files, governance hooks installed)
 - [x] **Independent adversarial review complete** (12 findings: 7 fixed + 5 documented)
-- [x] **Privacy Policy drafted** (`docs/privacy-policy.md` — 需上線至 HTTPS URL)
+- [x] **Privacy Policy drafted** (`docs/privacy-policy.md` — must be deployed to an HTTPS URL)
 - [ ] **Remote MCP submission portal** (needs Team/Enterprise Claude.ai org) OR **Desktop extension (MCPB)**
 - [ ] **Icon/logo** at https://aiorouter.ca/logo.png
 - [ ] **Test account** for reviewer + end-to-end access instructions
@@ -172,97 +172,97 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 
 ## 9. Claude Connector Directory Submission
 
-> **來源:** Anthropic 官方 Connectors Directory 文件（2026-08-01 確認）— 提交非公開自助入口，需經官方管道。
+> **Source:** Anthropic official Connectors Directory documentation (confirmed 2026-08-01) — submission is NOT a public self-serve portal; it goes through official channels.
 
-### 9.1 提交管道（依 connector 類型）
+### 9.1 Submission channels (by connector type)
 
-| 類型 | 管道 | 前置要求 |
+| Type | Channel | Prerequisites |
 |:---|:---|:---|
-| **Remote MCP server**（`https://api.aiorouter.ca/mcp`） | Claude.ai submission portal: `https://claude.ai/admin-settings/directory/submissions/new` | **需 Team/Enterprise Claude.ai 組織** + Directory management 權限（個別方案無 admin settings） |
-| **Desktop extension (MCPB)** | 獨立表單: `https://clau.de/desktop-extention-submission` | 不需 portal；本地 stdio server 打包為 MCP Bundle |
+| **Remote MCP server** (`https://api.aiorouter.ca/mcp`) | Claude.ai submission portal: `https://claude.ai/admin-settings/directory/submissions/new` | **Requires a Team/Enterprise Claude.ai org** + Directory management permission (individual plans have no admin settings) |
+| **Desktop extension (MCPB)** | Separate form: `https://clau.de/desktop-extention-submission` | No portal required; package the local stdio server as an MCP Bundle |
 
-> ⚠️ **AIOrouter 是 remote + local 雙型態。** Remote 提交需 Team/Enterprise org（FOUNDER 決策）；或將 `npx @aiorouter/mcp` 打包為 MCPB 走 Desktop extension 管道。
+> ⚠️ **AIOrouter is dual-mode (remote + local).** Remote submission requires a Team/Enterprise org (FOUNDER decision); alternatively package `npx @aiorouter/mcp` as an MCPB and use the Desktop extension channel.
 
-### 9.2 提交要求（我們現況）
+### 9.2 Submission requirements (our status)
 
-| 要求 | AIOrouter 狀態 |
+| Requirement | AIOrouter status |
 |:---|:---|
-| **Security** | ✅ PII Shield + HTTPS + 15 項機密掃描通過 |
-| **Tool annotations**（title + readOnlyHint/destructiveHint） | ✅ 10 tools 全部符合（9 readOnly + chat destructiveHint） |
-| **Authentication** | ✅ OAuth 2.1（自訂 OAuthServerProvider + MCP-scoped tokens）— Remote 用 |
-| **Privacy Policy** | ✅ 已建立 `docs/privacy-policy.md` — 需上傳 HTTPS URL（如 aiorouter.ca/privacy）|
-| **Documentation** | ✅ 公開 repo `github.com/AIOCANA/aiorouter-mcp` README |
+| **Security** | ✅ PII Shield + HTTPS + 15 secret scans passed |
+| **Tool annotations** (title + readOnlyHint/destructiveHint) | ✅ All 10 tools compliant (9 readOnly + chat destructiveHint) |
+| **Authentication** | ✅ OAuth 2.1 (custom OAuthServerProvider + MCP-scoped tokens) — Remote |
+| **Privacy Policy** | ✅ `docs/privacy-policy.md` created — must be deployed to an HTTPS URL (e.g. aiorouter.ca/privacy) |
+| **Documentation** | ✅ Public repo `github.com/AIOCANA/aiorouter-mcp` README |
 
-### 9.3 Portal 提交欄位（Remote 途徑）
+### 9.3 Portal submission fields (Remote path)
 
-| Step | 內容 | AIOrouter 準備 |
+| Step | Content | AIOrouter readiness |
 |:---|:---|:---|
-| Connection | Server URL（https）+ transport（streamable HTTP） | `https://api.aiorouter.ca/mcp` |
-| Tools | 自動同步 10 tools（按 readOnly/write 分組） | ✅ 已符合 |
-| Listing | name / tagline(55) / description(2000) / categories / docs URL / privacy URL / support contact / icon / slug(永久) | 待 FOUNDER 填寫 |
-| Use cases | 主要用途 + 前置需求（帳號/方案）| **需 AIOrouter 付費帳號 + API key**（無免費層 — D2 政策；API key 僅在註冊付款後產生） |
-| Company | 公司名/網站/聯絡人 | AIOrouter / aiorouter.ca |
-| Authentication | OAuth（dynamic client registration）| ✅ OAuth 2.1 |
-| Data handling | API 是否自有 | ✅ 自有 API |
-| Test & launch | **test 帳號 + 端到端指示**（審查員需能實際連線） | ⚠️ 待 FOUNDER 提供 test account |
-| Compliance | 7 項政策確認 | 待 FOUNDER 逐項確認 |
-| Review | 最終檢查 + 提交 | — |
+| Connection | Server URL (https) + transport (streamable HTTP) | `https://api.aiorouter.ca/mcp` |
+| Tools | Auto-sync 10 tools (grouped by readOnly/write) | ✅ compliant |
+| Listing | name / tagline(55) / description(2000) / categories / docs URL / privacy URL / support contact / icon / slug (permanent) | FOUNDER to fill |
+| Use cases | Primary use cases + prerequisites (account/plan) | **Requires a paid AIOrouter account + API key** (no free tier — D2 policy; API keys only issued after registration + payment) |
+| Company | Company name / website / contact | AIOrouter / aiorouter.ca |
+| Authentication | OAuth (dynamic client registration) | ✅ OAuth 2.1 |
+| Data handling | Whether the API is your own | ✅ First-party API |
+| Test & launch | **Test account + end-to-end instructions** (reviewer must be able to connect) | ⚠️ FOUNDER to provide test account |
+| Compliance | 7 policy acknowledgments | FOUNDER to confirm each |
+| Review | Final read-through + submit | — |
 
-### 9.4 建議的 Listing 內容（草稿）
+### 9.4 Suggested Listing content (draft)
 
 - **Connector name:** AIOrouter MCP
 - **Tagline:** Access 15+ AI models through a single API key with PII Shield privacy
-- **Description:** 提供 Claude 存取 15+ 非 Claude 模型（Qwen, DeepSeek, GLM, Kimi, Grok），透過單一 API key + PII Shield 保護個人資訊與技術機密。含 chat、模型清單、定價、用量、成本估算等 10 個 MCP tools。
+- **Description:** Gives Claude access to 15+ non-Claude models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key, with PII Shield protecting personal information and technical secrets. Includes 10 MCP tools: chat, model listing, pricing, usage, cost estimation, and more.
 - **Categories:** AI Models / Developer Tools
 - **Documentation URL:** https://github.com/AIOCANA/aiorouter-mcp
-- **Privacy Policy URL:** https://aiorouter.ca/privacy（需上線 `docs/privacy-policy.md`）
-- **Icon:** https://aiorouter.ca/logo.png（需準備）
+- **Privacy Policy URL:** https://aiorouter.ca/privacy (deploy `docs/privacy-policy.md`)
+- **Icon:** https://aiorouter.ca/logo.png (to prepare)
 - **Support contact:** support@aiorouter.ca
-- **Slug:** aiorouter-mcp（永久）
+- **Slug:** aiorouter-mcp (permanent)
 
-### 9.5 提交前 FOUNDER 待辦
+### 9.5 FOUNDER pre-submission checklist
 
-1. ⚠️ **決定 Remote vs MCPB 途徑**（Remote 需 Team/Enterprise Claude.ai org）
-2. 📄 上線 Privacy Policy 至 HTTPS URL（用 `docs/privacy-policy.md`）
-3. 🖼 準備 icon（https://aiorouter.ca/logo.png）
-4. 🔑 準備 test account + 端到端存取指示（審查員用）
-5. ✅ 用 MCP Inspector 或自訂 connector 實測所有 tools
-6. 📝 確認 7 項 Compliance 政策
+1. ⚠️ **Decide Remote vs MCPB path** (Remote needs a Team/Enterprise Claude.ai org)
+2. 📄 Deploy the Privacy Policy to an HTTPS URL (use `docs/privacy-policy.md`)
+3. 🖼 Prepare an icon (https://aiorouter.ca/logo.png)
+4. 🔑 Prepare a test account + end-to-end access instructions (for the reviewer)
+5. ✅ Test all tools with MCP Inspector or a custom connector
+6. 📝 Confirm the 7 compliance policy acknowledgments
 
 ---
 
-## 10. MCPB Desktop Extension Bundle（2026-08-01 ✅ BUILT）
+## 10. MCPB Desktop Extension Bundle (2026-08-01 ✅ BUILT)
 
-**決策：** MCPB 先發（零成本），Remote portal 待穩定收入後升級 Team 再提交。
+**Decision:** Ship MCPB first (zero cost); submit the Remote portal after stable income justifies upgrading to Claude.ai Team.
 
-**Bundle：** `dist/mcpb/aiorouter-mcp.mcpb`（4.9 kB，有效 ZIP）
+**Bundle:** `dist/mcpb/aiorouter-mcp.mcpb` (5.5 kB, valid ZIP)
 
 ```
-內容:
-  manifest.json  (manifest_version 0.2.0 + privacy_policies 陣列)
-  README.md      (含強制「Privacy Policy」區段)
+Contents:
+  manifest.json  (manifest_version 0.2.0 + privacy_policies array)
+  README.md      (with mandatory "Privacy Policy" section)
   icon.png       (public/images/brand/logo-nav.png)
-  server:        npx -y @aiorouter/mcp  (不打包 node_modules — 精簡)
+  server:        npx -y @aiorouter/mcp  (no node_modules bundled — lightweight)
 ```
 
-**快速使用（4 種方式，由簡到繁）：**
+**Quick use (4 ways, simplest first):**
 ```
-方式 1 一鍵安裝: 下載 aiorouter-mcp.mcpb → 雙擊 → Claude Desktop 自動安裝
-方式 2 零安裝:    npx -y @aiorouter/mcp (既有路徑)
-方式 3 手動設定:  claude_desktop_config.json 加 mcpServers
-方式 4 進階:      從公開 repo 下載 + 指令安裝
+Way 1 One-click:  download aiorouter-mcp.mcpb → double-click → Claude Desktop auto-installs
+Way 2 Zero-install: npx -y @aiorouter/mcp (existing path)
+Way 3 Manual:      add mcpServers to claude_desktop_config.json
+Way 4 Advanced:     download from the public repo + install via CLI
 ```
 
-**重打包指令（更新後）：**
+**Rebuild (after updates):**
 ```bash
-node scripts/build-mcpb.mjs        # 重建 dist/mcpb/aiorouter-mcp.mcpb
-node scripts/verify-mcpb.mjs       # 驗證 ZIP 格式 + entries
+node scripts/build-mcpb.mjs        # rebuild dist/mcpb/aiorouter-mcp.mcpb
+node scripts/verify-mcpb.mjs       # verify ZIP format + entries
 ```
 
-**提交（Desktop extension 表單 `https://clau.de/desktop-extention-submission`）：**
-1. 上線 `docs/privacy-policy.md` → `https://aiorouter.ca/privacy`
-2. 填表單：connector 名稱/描述/privacy URL/icon/bundle
-3. （可選）官方 `mcpb` CLI 驗證格式
+**Submit (Desktop extension form `https://clau.de/desktop-extention-submission`):**
+1. Deploy `docs/privacy-policy.md` → `https://aiorouter.ca/privacy`
+2. Fill the form: connector name / description / privacy URL / icon / bundle
+3. (Optional) validate format with the official `mcpb` CLI
 
 ---
 
