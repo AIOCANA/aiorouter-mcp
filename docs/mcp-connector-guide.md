@@ -200,7 +200,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 | Connection | Server URL（https）+ transport（streamable HTTP） | `https://api.aiorouter.ca/mcp` |
 | Tools | 自動同步 10 tools（按 readOnly/write 分組） | ✅ 已符合 |
 | Listing | name / tagline(55) / description(2000) / categories / docs URL / privacy URL / support contact / icon / slug(永久) | 待 FOUNDER 填寫 |
-| Use cases | 主要用途 + 前置需求（帳號/方案） | 需 AIOrouter 帳號 + API key |
+| Use cases | 主要用途 + 前置需求（帳號/方案）| **需 AIOrouter 付費帳號 + API key**（無免費層 — D2 政策；API key 僅在註冊付款後產生） |
 | Company | 公司名/網站/聯絡人 | AIOrouter / aiorouter.ca |
 | Authentication | OAuth（dynamic client registration）| ✅ OAuth 2.1 |
 | Data handling | API 是否自有 | ✅ 自有 API |
@@ -228,6 +228,41 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 4. 🔑 準備 test account + 端到端存取指示（審查員用）
 5. ✅ 用 MCP Inspector 或自訂 connector 實測所有 tools
 6. 📝 確認 7 項 Compliance 政策
+
+---
+
+## 10. MCPB Desktop Extension Bundle（2026-08-01 ✅ BUILT）
+
+**決策：** MCPB 先發（零成本），Remote portal 待穩定收入後升級 Team 再提交。
+
+**Bundle：** `dist/mcpb/aiorouter-mcp.mcpb`（4.9 kB，有效 ZIP）
+
+```
+內容:
+  manifest.json  (manifest_version 0.2.0 + privacy_policies 陣列)
+  README.md      (含強制「Privacy Policy」區段)
+  icon.png       (public/images/brand/logo-nav.png)
+  server:        npx -y @aiorouter/mcp  (不打包 node_modules — 精簡)
+```
+
+**快速使用（4 種方式，由簡到繁）：**
+```
+方式 1 一鍵安裝: 下載 aiorouter-mcp.mcpb → 雙擊 → Claude Desktop 自動安裝
+方式 2 零安裝:    npx -y @aiorouter/mcp (既有路徑)
+方式 3 手動設定:  claude_desktop_config.json 加 mcpServers
+方式 4 進階:      從公開 repo 下載 + 指令安裝
+```
+
+**重打包指令（更新後）：**
+```bash
+node scripts/build-mcpb.mjs        # 重建 dist/mcpb/aiorouter-mcp.mcpb
+node scripts/verify-mcpb.mjs       # 驗證 ZIP 格式 + entries
+```
+
+**提交（Desktop extension 表單 `https://clau.de/desktop-extention-submission`）：**
+1. 上線 `docs/privacy-policy.md` → `https://aiorouter.ca/privacy`
+2. 填表單：connector 名稱/描述/privacy URL/icon/bundle
+3. （可選）官方 `mcpb` CLI 驗證格式
 
 ---
 

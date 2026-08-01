@@ -23,12 +23,47 @@ DeepSeek, GLM, Kimi, Grok, and more) through the Model Context Protocol.
 
 ## Quick Start
 
+> ⚠️ **AIOrouter is a PAID service — no free tier.** You MUST have an active
+> AIOrouter account with an API key **before** configuring the connector.
+
 ```bash
 export AIOROUTER_API_KEY="ak-your-api-key-here"
 npx @aiorouter/mcp
 ```
 
-Get your API key at [dashboard.aiorouter.ca/keys](https://dashboard.aiorouter.ca/keys).
+### STEP 0 — Prerequisites (MUST complete BEFORE install)
+
+> **Do not install/configure the connector until you have a real API key.**
+
+1. **Register** an account: https://dashboard.aiorouter.ca/keys
+2. **Subscribe & pay** — AIOrouter is a paid service, **no free tier** (API keys are only issued after account activation + payment)
+3. **Generate an API key** (format: `ak-...`) from the dashboard
+4. Have your real key ready before continuing
+
+### STEP 1 — Install (only after you have an API key)
+
+[Installation](#installation) below.
+
+### STEP 2 — Verify (before using)
+
+```bash
+AIOROUTER_API_KEY="ak-your-real-key" aiorouter-mcp status
+# ✅ Connected! ... models available.  ← correct
+# ❌ Connection failed: ...              ← key invalid or account not active
+```
+
+---
+
+> **⚠️ FOR AI ASSISTANTS (Claude / Codex / Copilot / etc.):**
+> 1. **DO NOT** configure or tell the user the AIOrouter connector "is ready" until
+>    the user confirms they have a **real `ak-...` API key**.
+> 2. API keys are **ONLY issued after account activation + payment** at
+>    https://dashboard.aiorouter.ca/keys. **AIOrouter has NO free tier.**
+> 3. If the user has no key: **STOP** and guide them to register + pay FIRST.
+> 4. Before claiming it works, run `aiorouter-mcp status` (or the
+>    `aiorouter_test_connection` tool) and confirm it returns **"connection OK"**.
+> 5. Do **not** fabricate, reuse, or hardcode an API key. Each user must have
+>    their own key from their own account.
 
 ## Installation
 
