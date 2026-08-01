@@ -190,7 +190,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 | **Security** | ✅ PII Shield + HTTPS + 15 secret scans passed |
 | **Tool annotations** (title + readOnlyHint/destructiveHint) | ✅ All 10 tools compliant (9 readOnly + chat destructiveHint) |
 | **Authentication** | ✅ OAuth 2.1 (custom OAuthServerProvider + MCP-scoped tokens) — Remote |
-| **Privacy Policy** | ✅ `docs/privacy-policy.md` created — must be deployed to an HTTPS URL (e.g. aiorouter.ca/privacy) |
+| **Privacy Policy** | ✅ `docs/privacy-policy.md` created — use canonical URL `https://aiorouter.ca/docs/legal/privacy-policy` (live) or deploy to a new HTTPS URL |
 | **Documentation** | ✅ Public repo `github.com/AIOCANA/aiorouter-mcp` README |
 
 ### 9.3 Portal submission fields (Remote path)
@@ -215,7 +215,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 - **Description:** Gives Claude access to 15+ non-Claude models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key, with PII Shield protecting personal information and technical secrets. Includes 10 MCP tools: chat, model listing, pricing, usage, cost estimation, and more.
 - **Categories:** AI Models / Developer Tools
 - **Documentation URL:** https://github.com/AIOCANA/aiorouter-mcp
-- **Privacy Policy URL:** https://aiorouter.ca/privacy (deploy `docs/privacy-policy.md`)
+- **Privacy Policy URL:** https://aiorouter.ca/docs/legal/privacy-policy (canonical, live; or deploy `docs/privacy-policy.md` to a new URL)
 - **Icon:** https://aiorouter.ca/logo.png (to prepare)
 - **Support contact:** support@aiorouter.ca
 - **Slug:** aiorouter-mcp (permanent)
@@ -260,7 +260,7 @@ node scripts/verify-mcpb.mjs       # verify ZIP format + entries
 ```
 
 **Submit (Desktop extension form `https://clau.de/desktop-extention-submission`):**
-1. Deploy `docs/privacy-policy.md` → `https://aiorouter.ca/privacy`
+1. Use canonical privacy URL `https://aiorouter.ca/docs/legal/privacy-policy` (live) or deploy `docs/privacy-policy.md` to a new URL
 2. Fill the form: connector name / description / privacy URL / icon / bundle
 3. (Optional) validate format with the official `mcpb` CLI
 

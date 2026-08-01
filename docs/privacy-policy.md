@@ -22,7 +22,7 @@ The AIOrouter MCP Connector collects the following data:
 - Conversation content is used **only to route requests to the AI model you choose** (Qwen, DeepSeek, GLM, Kimi, Grok, etc.) for inference.
 - Data is **de-identified by the AIOrouter PII Shield before routing** (personal information and technical secrets are protected first).
 - All transmission is **HTTPS-encrypted**.
-- Data storage follows the AIOrouter platform data policy (see https://aiorouter.ca/privacy).
+- Data storage follows the AIOrouter platform data policy (see https://aiorouter.ca/docs/legal/privacy-policy).
 
 ## 3. Third-party Sharing
 
@@ -32,7 +32,7 @@ The AIOrouter MCP Connector collects the following data:
 
 ## 4. Data Retention
 
-- Data retention follows the AIOrouter platform policy (https://aiorouter.ca/privacy).
+- Data retention follows the AIOrouter platform policy (https://aiorouter.ca/docs/legal/privacy-policy).
 - Users can review usage, revoke API keys, or request data deletion at any time at https://dashboard.aiorouter.ca.
 
 ## 5. Contact Information
