@@ -172,7 +172,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 - [x] MIT license included
 - [x] README with Quick Start + per-client setup
 - [x] Security review passed (15 secret scans, zero leaks)
-- [x] npm org `aiorouter` owned by AIOrouter (FOUNDER `tayachu`)
+- [x] npm org `aiorouter` owned by AIOrouter (FOUNDER account)
 - [x] **MCP protocol smoke test passed** (Phase 3H — `scripts/mcp-smoke-test.mjs`, 5/5 PASS)
 - [x] **Public GitHub repo `AIOCANA/aiorouter-mcp` LIVE** (`834300d`, 26 files, governance hooks installed)
 - [x] **Independent adversarial review complete** (12 findings: 7 fixed + 5 documented)

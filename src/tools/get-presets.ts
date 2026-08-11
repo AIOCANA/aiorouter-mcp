@@ -1,6 +1,5 @@
 // ── aiorouter_get_presets Tool (Phase 3A — P1) ─────────────────────────────
 // Local version: calls GET /v1/presets endpoint on the AIOrouter API.
-import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { getAiorouterAPI } from "../api-client.js";
 

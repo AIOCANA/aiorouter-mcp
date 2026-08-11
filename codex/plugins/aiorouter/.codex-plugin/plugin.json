@@ -4,7 +4,7 @@
   "description": "Access 15+ AI models (Qwen, DeepSeek, GLM, Kimi, Grok) through a single API key with PII Shield privacy protection.",
   "author": {
     "name": "AIOrouter",
-    "url": "https://github.com/tayachu"
+    "url": "https://github.com/AIOCANA/aiorouter-mcp"
   },
   "homepage": "https://aiorouter.ca",
   "repository": "https://github.com/AIOCANA/aiorouter-mcp",
