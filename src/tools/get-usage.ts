@@ -1,5 +1,5 @@
 // ── aiorouter_get_usage Tool ─────────────────────────────────────────────
-// Shows token usage, billing summary, and subscription status.
+// Shows token usage and billing balance.
 // Falls back to dashboard link if /v1/usage endpoint is unavailable.
 
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -8,18 +8,19 @@ import { getAiorouterAPI } from "../api-client.js";
 export function registerGetUsageTool(server: McpServer, apiKey: string): void {
   server.registerTool("aiorouter_get_usage", {
     title: "Get AIOrouter Usage & Billing",
-      description: `Get current usage, billing summary, and subscription status for your API key.`,
+      description: `Get current usage and billing balance for your API key.`,
       annotations: { readOnlyHint: true },
       inputSchema: {},
   }, async () => {
     const response = await getAiorouterAPI("/v1/usage", apiKey);
     if (response.error) {
       return {
-        content: [{ type: "text" as const, text: `Usage & billing details: https://dashboard.aiorouter.ca/billing\n\nView token consumption, balance, plan, and subscription status there.` }],
+        content: [{ type: "text" as const, text: `Usage & billing details: https://dashboard.aiorouter.ca/billing\n\nView token consumption and Top-Up balance there.` }],
       };
     }
     const u = response as Record<string, unknown>;
     const lines = ["📊 AIOrouter Usage & Billing\n"];
+    // Legacy fields retained for grandfathered subscribers; Top-Up users see balance only.
     if (u.subscription_plan !== undefined && u.subscription_plan !== null) lines.push(`Plan: ${u.subscription_plan}`);
     if (u.subscription_status !== undefined && u.subscription_status !== null) lines.push(`Status: ${u.subscription_status}`);
     if (u.total_tokens !== undefined && u.total_tokens !== null) lines.push(`Total tokens: ${u.total_tokens}`);

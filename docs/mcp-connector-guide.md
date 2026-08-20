@@ -46,7 +46,7 @@
 | 2 | `aiorouter_list_models` | List all available models with provider info | Yes |
 | 3 | `aiorouter_get_presets` | Show CODE-MAS orchestrator triple preset configuration | Yes |
 | 4 | `aiorouter_get_pricing` | Get public retail pricing (USD per 1M tokens) | Yes |
-| 5 | `aiorouter_get_usage` | Get usage, billing, and subscription status | Yes |
+| 5 | `aiorouter_get_usage` | Get usage and billing balance | Yes |
 | 6 | `aiorouter_test_connection` | Test API key validity and show account info | Yes |
 | 7 | `aiorouter_export_config` | Generate MCP config JSON for Claude Desktop/Code/Codex | Yes |
 | 8 | `aiorouter_compare_models` | Compare 2-5 models side-by-side | Yes |

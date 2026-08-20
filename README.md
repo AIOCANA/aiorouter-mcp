@@ -148,7 +148,7 @@ Add to `.mcp.json` in your project root:
 | 2 | `aiorouter_list_models` | List all available models with provider info |
 | 3 | `aiorouter_get_presets` | Show CODE-MAS orchestrator triple preset configuration |
 | 4 | `aiorouter_get_pricing` | Get public retail pricing (USD per 1M tokens) |
-| 5 | `aiorouter_get_usage` | Get usage, billing, and subscription status |
+| 5 | `aiorouter_get_usage` | Get usage and billing balance |
 | 6 | `aiorouter_test_connection` | Test API key validity and show account info |
 | 7 | `aiorouter_export_config` | Generate MCP config JSON for Claude Desktop/Code/Codex |
 | 8 | `aiorouter_compare_models` | Compare 2-5 models side-by-side |

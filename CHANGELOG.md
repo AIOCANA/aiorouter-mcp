@@ -31,7 +31,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/), versioning foll
   - `aiorouter_chat` — chat completion to any AIOrouter model
   - `aiorouter_list_models` — list models with provider info
   - `aiorouter_get_pricing` — public retail pricing
-  - `aiorouter_get_usage` — usage, billing, subscription status
+  - `aiorouter_get_usage` — usage and billing balance
   - `aiorouter_test_connection` — API key validity check
   - `aiorouter_export_config` — MCP config generator
 - stdio + Streamable HTTP transports
