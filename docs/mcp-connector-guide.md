@@ -178,7 +178,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 - [x] **Independent adversarial review complete** (12 findings: 7 fixed + 5 documented)
 - [x] **Privacy Policy drafted** (`docs/privacy-policy.md` — must be deployed to an HTTPS URL)
 - [ ] **Remote MCP submission portal** (needs Team/Enterprise Claude.ai org) OR **Desktop extension (MCPB)**
-- [ ] **Icon/logo** at https://aiorouter.ca/logo.png
+- [ ] **Icon/logo** at https://aiorouter.ca/images/brand/logo-nav.png
 - [ ] **Test account** for reviewer + end-to-end access instructions
 - [ ] Connector metadata submitted to Claude Connector Directory
 
@@ -228,7 +228,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 - **Categories:** AI Models / Developer Tools
 - **Documentation URL:** https://github.com/AIOCANA/aiorouter-mcp
 - **Privacy Policy URL:** https://aiorouter.ca/docs/legal/privacy-policy (canonical, live; or deploy `docs/privacy-policy.md` to a new URL)
-- **Icon:** https://aiorouter.ca/logo.png (to prepare)
+- **Icon:** https://aiorouter.ca/images/brand/logo-nav.png (published brand asset)
 - **Support contact:** support@aiorouter.ca
 - **Slug:** aiorouter-mcp (permanent)
 
@@ -236,7 +236,7 @@ Full schemas are exposed at runtime via MCP `tools/list`.
 
 1. ⚠️ **Decide Remote vs MCPB path** (Remote needs a Team/Enterprise Claude.ai org)
 2. 📄 Deploy the Privacy Policy to an HTTPS URL (use `docs/privacy-policy.md`)
-3. 🖼 Prepare an icon (https://aiorouter.ca/logo.png)
+3. 🖼 Prepare an icon (use the published brand asset https://aiorouter.ca/images/brand/logo-nav.png)
 4. 🔑 Prepare a test account + end-to-end access instructions (for the reviewer)
 5. ✅ Test all tools with MCP Inspector or a custom connector
 6. 📝 Confirm the 7 compliance policy acknowledgments
